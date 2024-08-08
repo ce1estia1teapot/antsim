@@ -31,7 +31,7 @@ def load_image(name: str = None, parent_dir: str = None, colorkey=-1, scale: int
 
     if name is None or not isinstance(name, str):
         main_logger.error(f'name argument cannot be None, must be string')
-    if parent_dir is None or not isinstance(name, str):
+    if parent_dir is None or not isinstance(parent_dir, str):
         main_logger.error(f'parent_dir argument cannot be None, must be string')
 
     fullname = os.path.join(parent_dir, name)
