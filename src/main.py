@@ -51,20 +51,21 @@ while m_game_running:
     # Detect input key
     keys = pg.key.get_pressed()
     if keys[pg.K_w]:
-        player_pos.y -= 300 * dt
         main_logger.debug(f'Key pressed: W')
+        player_pos.y -= 150 * dt
     if keys[pg.K_s]:
         main_logger.debug(f'Key pressed: S')
         player_pos.y += 150 * dt
     if keys[pg.K_a]:
         main_logger.debug(f'Key pressed: A')
-        player_pos.x -= 300 * dt
+        player_pos.x -= 150 * dt
     if keys[pg.K_d]:
         main_logger.debug(f'Key pressed: D')
-        player_pos.x += 300 * dt
+        player_pos.x += 150 * dt
 
     # Update display after frame is rendered
     pg.display.flip()
+
     # dt is delta time in seconds since last frame, used for framerate-
     # independent physics.
     dt = m_clock.tick(60) / 1000
